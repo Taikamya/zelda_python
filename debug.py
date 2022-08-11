@@ -1,5 +1,5 @@
 import pygame
-# import logging
+import logging
 
 # initializing pygame
 pygame.init()
@@ -14,3 +14,11 @@ def debug(info, y = 10, x = 10):
     debug_rect = debug_surf.get_rect(topleft = (x, y))
     pygame.draw.rect(display_surface, 'Black', debug_rect)
     display_surface.blit(debug_surf, debug_rect)
+
+    # logging debugs
+    logging.debug("debug info: ")
+    logging.info("info msg: ")
+    logging.error("error: ")
+    level = logging.DEBUG
+    fmt = "[%(levelname)s] %(asctime)s - %(message)s"
+    logging.basicConfig(level=level, format=fmt)
