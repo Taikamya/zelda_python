@@ -18,7 +18,7 @@ def debug(info, y = 10, x = 10):
     # logging debugs
     logging.debug("debug info: ")
     logging.info("info msg: ")
-    logging.error("error: ")
+    # logging.error("error: ")
     level = logging.DEBUG
     fmt = "[%(levelname)s] %(asctime)s - %(message)s"
     logging.basicConfig(level=level, format=fmt)
